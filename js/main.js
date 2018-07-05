@@ -1,11 +1,12 @@
 requirejs.config({
  paths:{
-	 "ELEMENT":"elementjs",
-	 "v":"requirejs-vue"
+	 'vue':"lib/vue",
+	 "ELEMENT":"lib/elementjs",
+	 "v":"lib/requirejs-vue",
  }	
 })
 
-require(['Vue','v!component/test','ELEMENT',],function(Vue,test,elementui){
+require(['vue','ELEMENT','v!component/test'],function(Vue,elementui){
 	Vue.use(elementui)
 	new Vue({
 		el:'#root',

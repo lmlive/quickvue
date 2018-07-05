@@ -1,13 +1,9 @@
   <template>
-      <div>
           <el-button @click="aa">{{text}}</el-button>
-					
-      </div>
-    
   </template>
     
     <script>
-      define(["Vue",'ELEMENT'], function(Vue,ele) {
+      define(["vue",'ELEMENT'], function(Vue,ele) {
           Vue.component("test", {
               template: template, // the variable template will be injected 
               data: function() {
