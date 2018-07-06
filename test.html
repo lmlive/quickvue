@@ -1,12 +1,48 @@
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>test required js</title>
-	<script src="js/require.js" data-main="js/main"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test required js</title>
+    <script src="js/lib/vue.js"></script>
+    <script src="js/lib/vue-router.js"></script>
 </head>
+
 <body>
-	
+    <div id="app">
+        <router-view></router-view>
+
+    </div>
+
+    <script>
+        const Foo = {
+            template: '<div>foo</div>'
+        }
+        const Bar = {
+            template: '<div>bar</div>'
+        }
+        const routes = [{
+                path: '/foo',
+                component: Foo
+            },
+            {
+                path: '/bar',
+                component: Bar
+            }
+        ]
+        const router = new VueRouter({
+            routes // short for `routes: routes`
+        })
+
+        new Vue({
+            router: router,
+            el: '#app',
+            mounted() {
+                console.log(this.$router)
+            }
+        })
+    </script>
 </body>
+
 </html>

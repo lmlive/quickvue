@@ -4,7 +4,7 @@
     
     <script>
       define(["vue",'ELEMENT'], function(Vue,ele) {
-          Vue.component("test", {
+          return Vue.component("test", {
               template: template, // the variable template will be injected 
               data: function() {
                   return {"text": "Ok"};
