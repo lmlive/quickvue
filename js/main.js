@@ -1,9 +1,13 @@
 requirejs.config({
+	basePath:'lib',
     paths: {
         'vue': "lib/vue",
         "ELEMENT": "lib/elementjs",
         "v": "lib/requirejs-vue",
-        "VueRouter": "lib/vue-router"
+        "VueRouter": "lib/vue-router",
+		"axios":"lib/axios.min",
+		"mock":"lib/axios-mock-adapter.min",
+		'httputil':"lib/httputil"
     },
     shim: {
         'VueRouter': {
